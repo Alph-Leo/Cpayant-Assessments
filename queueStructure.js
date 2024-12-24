@@ -1,23 +1,23 @@
-class Queue {
+class Queue {   // Queue class with a constructor that initializes an empty array items.
     constructor() {
         this.items = [];
     }
-    addToTheQueue(value) {
+    addToTheQueue(value) {  // enqueue method to add an element to the end of the queue.
         this.items.push(value);
     }
 
-    removeFromTheQueue() {
+    removeFromTheQueue() {  // dequeue method to remove and return the first element of the queue. Throws an error if the queue is empty.
         if (this.isEmptyQueue()) {
             throw new Error('Queue is empty');
         }
         return this.items.shift();
     }
 
-    isEmptyQueue() {
+    isEmptyQueue() { // isEmpty method to check if the queue has no elements.
         return this.items.length === 0;
     }
 
-    peekInsideTheQueue() {
+    peekInsideTheQueue() {  // peek method to return the first element without removing it. Throws an error if the queue is empty.
         if (this.isEmptyQueue()) {
             throw new Error('Queue is empty');
         }
